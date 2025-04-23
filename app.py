@@ -4,7 +4,8 @@ from config import Config
 from models import db, User
 from auth import auth_bp
 from views import views_bp
-from trip import trip_bp  # Add this import
+from trip import trip_bp
+from journal_entries import journal_bp
 
 def create_app():
     app = Flask(__name__)
@@ -23,7 +24,8 @@ def create_app():
     # Register blueprints
     app.register_blueprint(auth_bp)
     app.register_blueprint(views_bp)
-    app.register_blueprint(trip_bp)  # Register the trip blueprint
+    app.register_blueprint(trip_bp)
+    app.register_blueprint(journal_bp)
     
     # Create database tables before first request
     with app.app_context():

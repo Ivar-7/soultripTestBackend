@@ -40,7 +40,7 @@ def login():
     
     # Check password
     if user and user.check_password(data['password']):
-        login_user(user)
+        login_user(user, remember=True)
         return jsonify({'message': 'Login successful', 'user_id': user.id}), 200
     
     return jsonify({'error': 'Invalid username or password'}), 401
