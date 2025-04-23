@@ -6,6 +6,7 @@ from auth import auth_bp
 from views import views_bp
 from trip import trip_bp
 from journal_entries import journal_bp
+from trusted_contacts import contacts_bp
 
 def create_app():
     app = Flask(__name__)
@@ -26,6 +27,7 @@ def create_app():
     app.register_blueprint(views_bp)
     app.register_blueprint(trip_bp)
     app.register_blueprint(journal_bp)
+    app.register_blueprint(contacts_bp)
     
     # Create database tables before first request
     with app.app_context():
