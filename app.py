@@ -1,13 +1,13 @@
 from flask import Flask
 from flask_login import LoginManager
 from config import Config
-from models import db, User
-from auth import auth_bp
+from models.models import db, User
+from routes.auth import auth_bp
 from views import views_bp
-from trip import trip_bp
-from journal_entries import journal_bp
-from trusted_contacts import contacts_bp
-from locations import locations_bp
+from routes.trip import trip_bp
+from routes.journal_entries import journal_bp
+from routes.trusted_contacts import contacts_bp
+from routes.locations import locations_bp
 
 def create_app():
     app = Flask(__name__)

@@ -1,7 +1,7 @@
 from datetime import datetime
 from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
-from models import db, TrustedContact
+from models.models import db, TrustedContact
 from sqlalchemy.exc import SQLAlchemyError
 import re
 

@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
-from models import db, Trip, Location
+from models.models import db, Trip, Location
 from datetime import datetime
 from sqlalchemy.exc import SQLAlchemyError
 
